@@ -64,9 +64,6 @@ A web application designed to help users plan and manage their trips efficiently
 2. Input a destination and travel dates to receive trip information.
 3. Access weather forecasts, location images, and calculate trip duration.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Acknowledgements
 

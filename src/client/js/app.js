@@ -41,12 +41,14 @@ const calculateDaysUntilTrip = (tripStartDate) => {
 };
 
 // Function to calculate the duration of the trip in days
-const calculateTripLength = (start, end) => {
-    const startDate = new Date(start);
-    const endDate = new Date(end);
-    const tripLength = Math.ceil((endDate - startDate) / (1000 * 60 * 60 * 24));
-    return tripLength;
-};
+function calculateTripLength(startDate, endDate) {
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    const timeDifference = end.getTime() - start.getTime();
+    const dayDifference = timeDifference / (1000 * 3600 * 24);
+    return Math.round(dayDifference) - 1; 
+}
+
 
 // Function to display trip details in the UI
 const renderTripDetails = (geoCoordinates, weatherForecast, locationImage, start, end, tripLength) => {
